@@ -15,7 +15,8 @@ The intended audience for this pull request description is the project maintaine
 Task:
 Your task is to generate a pull request description for a set of commits.
 Follow [FORMATTEMPLATE] and rules to generate the description.
-Follow instructions in comments and remove from the [FORMATTEMPLATE] before returning a final description.
+Follow any instructions in [FORMATTEMPLATE] when writing the description.
+Remove any commments from the description.
 Avoid unnecessary verbosity in the description.
 
 Result:

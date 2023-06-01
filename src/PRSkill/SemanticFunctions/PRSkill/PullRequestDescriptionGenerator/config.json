@@ -3,7 +3,7 @@
   "type": "completion",
   "description": "Generate a pull request description based on a git diff or git show file output.",
   "completion": {
-    "max_tokens": 1024,
+    "max_tokens": 1500,
     "temperature": 0,
     "top_p": 0,
     "presence_penalty": 0,
