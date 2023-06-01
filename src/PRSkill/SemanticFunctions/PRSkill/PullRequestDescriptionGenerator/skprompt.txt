@@ -1,0 +1,22 @@
+[GITDIFFCONTENT]
+{{$input}}
+[END GITDIFFCONTENT]
+
+[FORMATTEMPLATE]
+{{$template}}
+[END FORMATTEMPLATE]
+
+[GITDIFFCONTENT] is part or all of the output of `git diff` or `git show`.
+
+Use [GITDIFFCONTENT] as knowledge for completing tasks.
+
+The intended audience for this pull request description is the project maintainers and reviewers.
+
+Task:
+Your task is to generate a pull request description for a set of commits.
+Follow [FORMATTEMPLATE] and rules to generate the description.
+Follow any instructions in [FORMATTEMPLATE] when writing the description.
+Remove any commments from the description.
+Avoid unnecessary verbosity in the description.
+
+Result:

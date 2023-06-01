@@ -1,0 +1,15 @@
+[RESULTS]
+{{$input}}
+[END RESULTS]
+
+[PROMPT]
+{{$prompt}}
+[END PROMPT]
+
+Task:
+Please combine the results in [RESULTS] into a single result.
+Individual results in [RESULTS] were completions for the [PROMPT] template.
+Match the formatting, tone, and style of the individual results, as instructed in the [PROMPT] template and displayed in [RESULTS].
+Only use facts directly available in [RESULTS].
+
+Result:
