@@ -1,0 +1,16 @@
+name: Add PR Description
+
+on: workflow_call
+
+# Expected GITHUB_TOKEN permissions
+# permissions:
+#   pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: lemillermicrosoft/add-pr-description-action@working_action
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
