@@ -100,6 +100,37 @@ public class PullRequestSkill
             var prompt = (await prGeneratorCapture.InvokeAsync()).Result;
 
             var chunkedInput = CommitChunker.ChunkCommitInfo(context.Variables.Input, CHUNK_SIZE);
+
+            // TODO Eventually this should be an input to the skill
+            context.Variables.Set("template", @"### Title
+<!--
+
+Provide a short summary of your changes in the Title above that take into account the full scope and context of the changes.
+
+Keep the title length less than 50 characters and use imperative, present tense.
+-->
+
+### Motivation and Context
+<!--
+
+Please help reviewers and future users, providing the following information:
+
+1. Why is this change required?
+2. What problem does it solve?
+3. What scenario does it contribute to?
+4. If it fixes an open issue, please link to the issue here.
+-->
+
+
+### Description
+<!--
+
+Describe your changes, the overall approach, the underlying design.
+
+These notes will help understanding how your code works. Thanks!
+-->
+");
+
             return await prGenerator.CondenseChunkProcess(this.condenseSkill, chunkedInput, prompt, context, "PullRequestDescriptionResult");
         }
         catch (Exception e)
